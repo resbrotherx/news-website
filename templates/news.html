@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+            <div id="page_caption" class="  ">
+                <div class="page_title_wrapper">
+                    <div class="page_title_inner">
+                        <div class="post_info_cat">
+                            <div class="breadcrumb"><a href="index.html">Home</a> » News</div>
+                        </div>
+                        <h1><span>News</span></h1>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Begin content -->
+            <div id="page_content_wrapper" class="">
+                <div class="inner">
+                    <!-- Begin main content -->
+                    <div class="inner_wrapper">
+                        <div class="sidebar_content">
+                            <!-- Begin each blog post -->
+                            {% for news in news %}
+                            <div id="post-3761" class="post-3761 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-lifestyle category-style category-topnews tag-bridge tag-lifestyle tag-travel">
+                                <div class="post_wrapper">
+                                    <div class="post_content_wrapper">
+                                        <div class="post_header mixed">
+                                            <div class="post_header_title">
+                                                <div class="post_info_cat">
+                                                    <span>
+                                                        <a href="#">Food</a>
+                                                        &nbsp;/
+                                                        <a href="singleblog.html">Life Style</a>
+                                                        &nbsp;/
+                                                        <a href="singleblog.html">Style</a>
+                                                        &nbsp;/
+                                                        <a href="singleblog.html">Top News</a>
+                                                    </span>
+                                                </div>
+                                                <h5>
+                                                    <a href="singleblog.html" title="{{news.title}}">
+                                                        {{news.title}}
+                                                    </a>
+                                                </h5>
+                                                <div class="post_detail post_date">
+                                                    <span class="post_info_author">
+                                                        <a href="singleblog.html">
+                                                            <span class="gravatar">
+                                                                <img
+                                                                    alt=""
+                                                                    src="{{news.image.url}}"
+                                                                    class="avatar avatar-60 photo"
+                                                                    height="60"
+                                                                    width="60"
+                                                                    loading="lazy"
+                                                                />
+                                                            </span>
+                                                            {{user.first_name}} {{user.last_name}}
+                                                        </a>
+                                                    </span>
+                                                    <span class="post_info_date">
+                                                        <a href="singleblog.html">Posted On {{news.date_updated|date}}</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <br class="clear" />
+
+                                            <div class="post_img">
+                                                <a href="singleblog.html">
+                                                    <img src="{{news.image.url}}" alt="" class="" style="width: 960px; height: 640px;" />
+                                                </a>
+                                            </div>
+
+                                            <br class="clear" />
+
+                                            <p>
+                                               {{news.little_discription}} [&hellip;]
+                                            </p>
+
+                                            <br class="clear" />
+
+                                            <div class="post_button_wrapper">
+                                                <a class="readmore" href="singleblog.html">Continue Reading</a>
+                                            </div>
+
+                                            <div class="post_info_comment">
+                                                <a href="singleblog.html"><i class="fa fa-commenting"></i>0</a>
+                                            </div>
+
+                                            <div class="post_info_view"><i class="fa fa-eye"></i>6.1K&nbsp;Views</div>
+
+                                            <br class="clear" />
+                                            <hr class="post_divider" />
+                                            <hr class="post_divider double" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                            {% endfor %}
+                            <!-- End each blog post -->
+
+                            <!-- Begin each blog post -->
+                           
+                            <!-- End each blog post -->
+
+                            <div class="pagination"><div class="pagination_page">1</div></div>
+                        </div>
+
+                        <div class="sidebar_wrapper">
+                            <div class="sidebar">
+                                <div class="content">
+                                    <ul class="sidebar_widget">
+                                        <li id="grand_news_custom_ads-4" class="widget Grand_News_Custom_Ads">
+                                            <div class="ads_label">- Advertisement -</div>
+                                            <img src="{% static 'upload/300x250ads.png' %}" alt="" />
+                                        </li>
+                                        <li id="mc4wp_form_widget-4" class="widget widget_mc4wp_form_widget">
+
+                                            <h2 class="widgettitle"><span>Subscribe</span></h2>
+
+                                            <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-618" method="post" data-id="618" data-name="Subscribe">
+                                                {% csrf_token %}
+                                                <div class="mc4wp-form-fields">
+                                                    <div class="subscribe_tagline">
+                                                        Get the recent popular stories straight into your inbox
+                                                    </div>
+
+                                                    <div class="subscribe_form">
+                                                        <p>
+                                                            <input type="email" name="EMAIL" placeholder="Email" required="" />
+                                                        </p>
+
+                                                        <p>
+                                                            <input type="submit" value="Sign up" />
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label>
+                                                <input type="hidden" name="_mc4wp_timestamp" value="1654935617" /><input type="hidden" name="_mc4wp_form_id" value="618" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+                                                <div class="mc4wp-response"></div>
+                                            </form>
+                                            <!-- / Mailchimp for WordPress Plugin -->
+                                        </li>
+                                        <li id="grand_news_popular_posts-5" class="widget Grand_News_Popular_Posts">
+                                            <h2 class="widgettitle"><span>Popular Posts</span></h2>
+                                            <ul class="posts blog withthumb">
+                                                
+                                                {% for popular in popular %}
+                                                <li>
+                                                    <div class="post_circle_thumb">
+                                                        <a href="singleblog.html">
+                                                            <div class="post_number">1</div>
+                                                            <img src="{{popular.image.url}}" class="tg-lazy" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <a href="singleblog.html">{{popular.title}}</a>
+                                                </li>
+                                                {% endfor %}
+
+
+                                                
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                    <!-- End main content -->
+                </div>
+            </div>
+
+  {% endblock content %}       

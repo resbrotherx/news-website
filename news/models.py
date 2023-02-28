@@ -6,8 +6,8 @@ class Tags(models.Model):
 	name = models.CharField(max_length=300)
 
 	class Meta:
-		verbose_name = 'name'
-		verbose_name_plural = 'names'
+		verbose_name = 'tag'
+		verbose_name_plural = 'tags'
 
 	def __str__(self):
 		return self.name
@@ -15,9 +15,14 @@ class Tags(models.Model):
 class New(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	title = models.CharField(max_length=500)
+	image = models.ImageField(default=False)
+	little_discription = models.TextField(default=False)
 	discription = models.TextField()
 	futured = models.BooleanField(default=False)
-	likes=models.ManyToManyField(User, related_name="q_loved", blank=True)
+	one = models.BooleanField(default=False)
+	popular = models.BooleanField(default=False)
+	approved = models.BooleanField(default=False)
+	likes=models.ManyToManyField(User, related_name="love", blank=True)
 	# dislikes=models.ManyToManyField(User, related_name="q_disliked", blank=True)
 	tags = models.ManyToManyField(Tags)
 	date_updated = models.DateTimeField(auto_now=True)
@@ -44,3 +49,11 @@ class NewsComment(models.Model):
 
     def __str__(self):
         return f"{self.user.username} comment"
+
+
+class Email(models.Model):
+	emais = models.EmailField()
+
+
+	def __str__(self):
+		return self.emais

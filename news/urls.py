@@ -2,12 +2,11 @@ from django.contrib import admin
 from django.urls import path,include
 from . import views
 
-app_name = 'webify'
+app_name = 'news'
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('/news', views.news, name="news"),
-    path('/about', views.about, name="about"),
-    path('/contact', views.contact, name="contact"),
+    path('news/', views.news, name="news"),
+    path('about/', views.about, name="about"),
+    path('contact/', views.contact, name="contact"),
 ]
-

@@ -1,0 +1,806 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+            <div class="ppb_wrapper">
+                <div class="ppb_blog_ticker one nopadding" style="padding: 20px 0 20px 0;">
+                    <div class="standard_wrapper">
+                        <div class="newsticker_label"><i class="fa fa-bolt"></i>Trending</div>
+                        <ul id="16549355802059259368" class="newsticker">
+                            <li><a title="21 Questions with… Fashion Photographer Emma Summerton" href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">21 Questions with… Fashion Photographer Emma Summerton</a></li>
+                            <li>
+                                <a title="Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016" href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">
+                                    Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels" href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">
+                                    Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels
+                                </a>
+                            </li>
+                            <li><a title="The 23 Best Beauty Moments From the Fall 2016 Runways" href="the-23-best-beauty-moments-from-the-fall-2016-runways.html">The 23 Best Beauty Moments From the Fall 2016 Runways</a></li>
+                        </ul>
+                        <div class="newsticker_nav">
+                            <a href="javascript:;" id="newsticker_prev16549355802059259368" class="newsticker_prev">Prev</a><a href="javascript:;" id="newsticker_next16549355802059259368" class="newsticker_next">Next</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                
+
+                <div class="ppb_blog3_grid one nopadding" style="padding-top: 0 !important; padding: 20px 0 20px 0;">
+                   {% for i in banner %}
+                    <div class="one_half div_wrapper" style="background-image: url('{{i.image.url}}');">
+                        <div class="post_header">
+                            <div class="post_detail post_date">
+                                <span class="post_info_author">
+                                    <span class="gravatar">
+                                        <img
+                                            alt=""
+                                            src="{{i.image.url}}"
+                                            class="avatar avatar-60 photo"
+                                            height="60"
+                                            width="60"
+                                            loading="lazy"
+                                        />
+                                    </span>
+                                    {{i.user.first_name}} {{i.user.last_name}}
+                                </span>
+                                <span class="post_info_date">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">{{i.date_updated|date}}</a>
+                                </span>
+                            </div>
+                            <h2>
+                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title=" {{ i.title}}">
+                                    {{ i.title}}
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="one_half div_wrapper last">
+                      {% for i in banners %}
+                        <div class="one div_small_wrapper" style="background-image: url('{{i.image.url}}');">
+                            <div class="post_header">
+                                <div class="post_detail post_date">
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">March 23, 2016</a>
+                                    </span>
+                                </div>
+                                <h2>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels">
+                                        Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+                    {% endfor %}
+                        <!-- <div class="one div_small_wrapper last" style="background-image: url('upload/hands-woman-laptop-working-960x640.jpg');">
+                            <div class="post_header">
+                                <div class="post_detail post_date">
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">March 20, 2016</a>
+                                    </span>
+                                </div>
+                                <h2>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways">
+                                        We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways
+                                    </a>
+                                </h2>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+              
+                <div class="ppb_blog_mixed_sidebar one nopadding" style="padding-top: 10px !important; padding: 30px 0 30px 0;">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="inner_wrapper">
+                                <div class="sidebar_content">
+                                    <div class="ppb_subtitle_left"><h5 class="single_subtitle">All The Latest News</h5></div>
+
+
+
+                                    <div class="filter clearfix gdlr-core-filterer-wrap gdlr-core-js  gdlr-core-item-pdlr gdlr-core-style-text gdlr-core-center-align">
+                                     <!--    <ul>
+                                            <li><a href="#" class="active" data-filter="*">All</a></li>
+                                            <li><a href="#" data-filter=".class1" >Latest</a></li>
+                                            <li><a href="#" data-filter=".class2" >Popular</a></li>
+                                            <li><a href="#" data-filter=".class3" >Wellnes</a></li>
+                                        </ul> -->
+                                    </div>    
+
+
+
+                                    <div class="post_filter_wrapper">
+                                        <div class="filter-container" data-type="portfolio" data-layout="fitRows">
+                                        {% for i in lates %}
+                                          <div class="one_half div_wrapper class1">
+                                                <div class="post_img">
+                                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Magnificent Image Of The New Hoover Dam Bridge Taking Shape">
+                                                        <img src="{{i.image.url}}" alt=" {{i.title}}" />
+                                                    </a>
+                                                </div>
+                                                <div class="post_header">
+                                                    <h2>
+                                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="{{i.title}}">
+                                                            {{i.title}}
+                                                        </a>
+                                                    </h2>
+                                                    <div class="post_detail post_date">
+                                                        <span class="post_info_author">
+                                                            <a href="#">{{i.user.first_name}} {{i.user.last_name}}</a>
+                                                        </span>
+                                                        <span class="post_info_date">
+                                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On {{i.date_updated|date}}</a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                          {% endfor %}   
+                                           {% for i in lates2 %}
+                                            <div class="one_half div_wrapper last class2">
+                                                <div class="post_img">
+                                                    <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html" title="The 23 Best Beauty Moments From the Fall 2016 Runways">
+                                                        <img src="{{i.image.url}}" alt="The 23 Best Beauty Moments From the Fall 2016 Runways" />
+                                                    </a>
+                                                </div>
+                                                <div class="post_header">
+                                                    <h2>
+                                                        <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html" title="{{i.title}}">
+                                                            {{i.title}}
+                                                        </a>
+                                                    </h2>
+                                                    <div class="post_detail post_date">
+                                                        <span class="post_info_author">
+                                                            <a href="#">{{i.user.first_name}} {{i.user.last_name}}</a>
+                                                        </span>
+                                                        <span class="post_info_date">
+                                                            <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html">Posted On {{i.date_updated|date}}</a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                 {% endfor %}
+                                           {% for i in news %}
+                                            <div class="one_half class3">
+                                                <div class="post type-post">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_content_wrapper">
+                                                            <div class="post_header search">
+                                                                <div class="post_img static one_third">
+                                                                    <a href="blogger-rumi-neely-where-to-eat-drink-and-shop-in-los-angeles.html">
+                                                                        <img src="{{i.image.url}}" alt="" class="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="post_header_title two_third last">
+                                                                    <h5>
+                                                                        <a href="blogger-rumi-neely-where-to-eat-drink-and-shop-in-los-angeles.html" title="Blogger Rumi Neely: Where to Eat, Drink and Shop in LA">
+                                                                            {{i.title}}
+                                                                        </a>
+                                                                    </h5>
+                                                                    <div class="post_detail post_date">
+                                                                        <span class="post_info_date">
+                                                                            <a href="blogger-rumi-neely-where-to-eat-drink-and-shop-in-los-angeles.html">July 22, 2015</a>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+
+                                            {% for i in news2 %}
+                                           <div class="one_half last class2">
+                                                <div class="post type-post">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_content_wrapper">
+                                                            <div class="post_header search">
+                                                                <div class="post_img static one_third">
+                                                                    <a href="spotted-what-the-editors-wore-to-fashion-week-fall-2016.html">
+                                                                        <img src="{{i.image.url}}" alt="" class="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="post_header_title two_third last">
+                                                                    <h5>
+                                                                        <a href="spotted-what-the-editors-wore-to-fashion-week-fall-2016.html" title="Spotted! What the Editors Wore to Fashion Week Fall 2016">
+                                                                            {{i.title}}
+                                                                        </a>
+                                                                    </h5>
+                                                                    <div class="post_detail post_date">
+                                                                        <span class="post_info_date">
+                                                                            <a href="spotted-what-the-editors-wore-to-fashion-week-fall-2016.html">July 22, 2015</a>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            {% endfor %}
+                                           <!--  <div class="one_half class2">
+                                                <div class="post type-post">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_content_wrapper">
+                                                            <div class="post_header search">
+                                                                <div class="post_img static one_third">
+                                                                    <a href="11-spring-pieces-you-can-start-wearing-now-seriously.html">
+                                                                        <img src="upload/food-salad-healthy-lunch-700x466.jpg" alt="" class="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="post_header_title two_third last">
+                                                                    <h5>
+                                                                        <a href="11-spring-pieces-you-can-start-wearing-now-seriously.html" title="11 Spring Pieces You Can Start Wearing Now (Seriously)">
+                                                                            11 Spring Pieces You Can Start Wearing Now (Seriously)
+                                                                        </a>
+                                                                    </h5>
+                                                                    <div class="post_detail post_date">
+                                                                        <span class="post_info_date">
+                                                                            <a href="11-spring-pieces-you-can-start-wearing-now-seriously.html">July 22, 2015</a>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+
+                                            <!--  
+                                            <div class="one_half last class3">
+                                                <div class="post type-post">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_content_wrapper">
+                                                            <div class="post_header search">
+                                                                <div class="post_img static one_third">
+                                                                    <a href="these-are-the-10-colors-set-to-dominate-fashion-week.html">
+                                                                        <img src="upload/DeathtoStock_NYC7-Custom-700x466.jpg" alt="" class="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="post_header_title two_third last">
+                                                                    <h5>
+                                                                        <a href="these-are-the-10-colors-set-to-dominate-fashion-week.html" title="These Are the 10 Colors Set to Dominate Fashion Week">
+                                                                            These Are the 10 Colors Set to Dominate Fashion Week
+                                                                        </a>
+                                                                    </h5>
+                                                                    <div class="post_detail post_date">
+                                                                        <span class="post_info_date">
+                                                                            <a href="these-are-the-10-colors-set-to-dominate-fashion-week.html">July 22, 2015</a>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                
+                                            <div class="one_half last class2">
+                                                <div class="post type-post">
+                                                    <div class="post_wrapper">
+                                                        <div class="post_content_wrapper">
+                                                            <div class="post_header search">
+                                                                <div class="post_img static one_third">
+                                                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">
+                                                                        <img src="upload/pexels-photo-42154-700x466.jpg" alt="" class="" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="post_header_title two_third last">
+                                                                    <h5>
+                                                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="All the Best Street Style Looks From London Fashion Week Fall 2016">
+                                                                            All the Best Street Style Looks From London Fashion Week Fall 2016
+                                                                        </a>
+                                                                    </h5>
+                                                                    <div class="post_detail post_date">
+                                                                        <span class="post_info_date">
+                                                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">July 20, 2015</a>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar_wrapper">
+                                    <div class="sidebar">
+                                        <div class="content">
+                                            <ul class="sidebar_widget">
+                                                <li id="grand_news_custom_ads-5" class="widget Grand_News_Custom_Ads">
+                                                    <div class="ads_label">- Advertisement -</div>
+                                                    <img src="upload/300x250ads.png" alt="" />
+                                                </li>
+                                                <li id="mc4wp_form_widget-6" class="widget widget_mc4wp_form_widget">
+                                                    <h2 class="widgettitle"><span>Subscribe</span></h2>
+                                                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-618" method="post" data-id="618" data-name="Subscribe">
+                                                        <div class="mc4wp-form-fields">
+                                                            <div class="subscribe_tagline">
+                                                                Get the recent popular stories straight into your inbox
+                                                            </div>
+
+                                                            <div class="subscribe_form">
+                                                                <p>
+                                                                    <input type="email" name="EMAIL" placeholder="Email" required="" />
+                                                                </p>
+
+                                                                <p>
+                                                                    <input type="submit" value="Sign up" />
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label>
+                                                        <input type="hidden" name="_mc4wp_timestamp" value="1654935580" /><input type="hidden" name="_mc4wp_form_id" value="618" />
+                                                        <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+                                                        <div class="mc4wp-response"></div>
+                                                    </form>
+                                                    <!-- / Mailchimp for WordPress Plugin -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ppb_blog_video one nopadding" style="padding-bottom: 10px !important; padding: 0px 0 0px 0;">
+                    <div class="one div_wrapper" style="background-image: url('upload/prague-960x640.jpg');">
+                        <div class="post_icon_circle"><i class="fa fa-play"></i></div>
+                        <div class="post_header">
+                            <div class="standard_wrapper">
+                                <div class="post_category_tag"><span>Entertainment</span></div>
+                                <div class="post_detail post_date">
+                                    <span class="post_info_author">
+                                        <span class="gravatar">
+                                            <img
+                                                alt=""
+                                                src="upload/avatar2.jpg"
+                                                class="avatar avatar-60 photo"
+                                                height="60"
+                                                width="60"
+                                                loading="lazy"
+                                            />
+                                        </span>
+                                        John Philippe
+                                    </span>
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">July 22, 2015</a>
+                                    </span>
+                                </div>
+                                <h2>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Industry Influencers Reveal the Famous Women Who Inspire">Industry Influencers Reveal the Famous Women Who Inspire</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="standard_wrapper three_cols">
+                        <div class="one_third">
+                            <div class="post_img static small">
+                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="High-End Street Style Shines at Haute Couture Fashion Week">
+                                    <div class="post_icon_circle"><i class="fa fa-play"></i></div>
+                                    <img src="upload/photo-1445019980597-93fa8acb246c-960x640.jpg" alt="High-End Street Style Shines at Haute Couture Fashion Week" />
+                                </a>
+                            </div>
+                            <br class="clear" />
+                            <div class="post_header">
+                                <h5>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="High-End Street Style Shines at Haute Couture Fashion Week">
+                                        High-End Street Style Shines at Haute Couture Fashion Week
+                                    </a>
+                                </h5>
+                                <div class="post_detail post_date">
+                                    <span class="post_info_author">
+                                        <a href="#">John Philippe</a>
+                                    </span>
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On July 22, 2015</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one_third">
+                            <div class="post_img static small">
+                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Forest Festivities: The Best Festival Outfits From Secret Garden Australia">
+                                    <div class="post_icon_circle"><i class="fa fa-play"></i></div>
+                                    <img src="upload/photo-1446814699583-d835df35a267-960x640.jpg" alt="Forest Festivities: The Best Festival Outfits From Secret Garden Australia" />
+                                </a>
+                            </div>
+                            <br class="clear" />
+                            <div class="post_header">
+                                <h5>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Forest Festivities: The Best Festival Outfits From Secret Garden Australia">
+                                        Forest Festivities: The Best Festival Outfits From Secret Garden Australia
+                                    </a>
+                                </h5>
+                                <div class="post_detail post_date">
+                                    <span class="post_info_author">
+                                        <a href="#">John Philippe</a>
+                                    </span>
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On July 21, 2015</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one_third last">
+                            <div class="post_img static small">
+                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="All the Best Street Style Looks From London Fashion Week Fall 2016">
+                                    <div class="post_icon_circle"><i class="fa fa-play"></i></div>
+                                    <img src="upload/pexels-photo-42154-960x640.jpg" alt="All the Best Street Style Looks From London Fashion Week Fall 2016" />
+                                </a>
+                            </div>
+                            <br class="clear" />
+                            <div class="post_header">
+                                <h5>
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="All the Best Street Style Looks From London Fashion Week Fall 2016">
+                                        All the Best Street Style Looks From London Fashion Week Fall 2016
+                                    </a>
+                                </h5>
+                                <div class="post_detail post_date">
+                                    <span class="post_info_author">
+                                        <a href="#">John Philippe</a>
+                                    </span>
+                                    <span class="post_info_date">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On July 20, 2015</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br class="clear" />
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="one withsmallpadding ppb_ads" style="padding: 30px 0 30px 0;">
+                    <div class="ads_label">- Advertisement -</div>
+                    <p>
+                        <a href="#"><img src="upload/728x90ads.png" alt="" /></a>
+                    </p>
+                </div>
+                <div class="one withsmallpadding ppb_header" style="padding-top: 0 !important; text-align: center; padding: 0px 0 0px 0; color: #ff3d36;">
+                    <div class="standard_wrapper">
+                        <div class="page_content_wrapper">
+                            <div class="inner">
+                                <div style="margin: auto; width: 100%;">
+                                    <h2 class="ppb_title" style="color: #ff3d36;">Latest Stories</h2>
+                                    <div class="ppb_subtitle">Your daily dose of inspirations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ppb_blog_3cols_pagination one nopadding" style="padding-top: 0 !important; padding: 20px 0 20px 0;">
+                    <div class="standard_wrapper three_cols">
+                        <div class="post_filter_wrapper">
+                            <div id="16549355801894685659_wrapper">
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="3 Delicious Post-Holiday Detox Recipes, Courtesy of Personal Chef">
+                                            <img src="upload/photo-1448518184296-a22facb4446f-960x640.jpg" alt="3 Delicious Post-Holiday Detox Recipes, Courtesy of Personal Chef" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="3 Delicious Post-Holiday Detox Recipes, Courtesy of Personal Chef">
+                                                3 Delicious Post-Holiday Detox Recipes, Courtesy of Personal Chef
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On March 24, 2016</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="21 Questions with… Fashion Photographer Emma Summerton">
+                                            <img src="upload/shutterstock_145254253-960x640.jpg" alt="21 Questions with… Fashion Photographer Emma Summerton" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="21 Questions with… Fashion Photographer Emma Summerton">21 Questions with… Fashion Photographer Emma Summerton</a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On March 24, 2016</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016">
+                                            <img src="upload/24-960x640.jpg" alt="Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016">
+                                                Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On March 24, 2016</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels">
+                                            <img src="upload/photo-1441471349424-351990746ff4-960x640.jpg" alt="Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels">
+                                                Kookaï’s Spring 2015 Runway Arrivals Talk Trends and Supporting Local Labels
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On March 23, 2016</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways">
+                                            <img src="upload/hands-woman-laptop-working-960x640.jpg" alt="We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways">
+                                                We Can’t Wait to Try These Makeup Trends From the Fall 2016 Runways
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On March 20, 2016</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Magnificent Image Of The New Hoover Dam Bridge Taking Shape">
+                                            <img src="upload/4-960x640.jpg" alt="Magnificent Image Of The New Hoover Dam Bridge Taking Shape" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Magnificent Image Of The New Hoover Dam Bridge Taking Shape">
+                                                Magnificent Image Of The New Hoover Dam Bridge Taking Shape
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On July 22, 2015</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html" title="The 23 Best Beauty Moments From the Fall 2016 Runways">
+                                            <img src="upload/city-road-street-buildings-960x640.jpg" alt="The 23 Best Beauty Moments From the Fall 2016 Runways" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html" title="The 23 Best Beauty Moments From the Fall 2016 Runways">The 23 Best Beauty Moments From the Fall 2016 Runways</a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="the-23-best-beauty-moments-from-the-fall-2016-runways.html">Posted On July 22, 2015</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="post_img static small">
+                                        <a href="whistleblower-wins-51-million-in-kickback-and-bribery-case.html" title="Whistleblower wins $51 million in kickback and bribery case">
+                                            <div class="post_icon_circle"><i class="fa fa-image"></i></div>
+                                            <img src="upload/45-960x640.jpg" alt="Whistleblower wins $51 million in kickback and bribery case" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="whistleblower-wins-51-million-in-kickback-and-bribery-case.html" title="Whistleblower wins $51 million in kickback and bribery case">
+                                                Whistleblower wins $51 million in kickback and bribery case
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="whistleblower-wins-51-million-in-kickback-and-bribery-case.html">Posted On July 22, 2015</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="post_img static small">
+                                        <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Industry Influencers Reveal the Famous Women Who Inspire">
+                                            <div class="post_icon_circle"><i class="fa fa-play"></i></div>
+                                            <img src="upload/prague-960x640.jpg" alt="Industry Influencers Reveal the Famous Women Who Inspire" />
+                                        </a>
+                                    </div>
+                                    <br class="clear" />
+                                    <div class="post_header">
+                                        <h5>
+                                            <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" title="Industry Influencers Reveal the Famous Women Who Inspire">
+                                                Industry Influencers Reveal the Famous Women Who Inspire
+                                            </a>
+                                        </h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_author">
+                                                <a href="#">John Philippe</a>
+                                            </span>
+                                            <span class="post_info_date">
+                                                <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html">Posted On July 22, 2015</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                        <br class="clear" />
+
+                    </div>
+                </div>
+                <div class="ppb_blog_random one nopadding" style="padding: 0px 0 0px 0;">
+                    <div class="title_bar">
+                        <div class="standard_wrapper">
+                            <div class="ppb_subtitle_left"><h5 class="single_subtitle">Editor&#039;s Picks</h5></div>
+                        </div>
+                    </div>
+                    <div class="post_filter_wrapper">
+                        <div id="1654935580255560224_wrapper">
+                            <div class="one_fifth_bg" style="background-image: url('upload/24-700x466.jpg');">
+                                <div class="post_header">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" class="content_link">
+                                        <h5>Runway Scorecard: The 10 Most In-Demand Models of Fashion Month Fall 2016</h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_date">
+                                                March 24, 2016
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="one_fifth_bg" style="background-image: url('upload/pexels-photo-42154-700x466.jpg');">
+                                <div class="post_header">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" class="content_link">
+                                        <h5>All the Best Street Style Looks From London Fashion Week Fall 2016</h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_date">
+                                                July 20, 2015
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="one_fifth_bg" style="background-image: url('upload/photo-1446814699583-d835df35a267-700x466.jpg');">
+                                <div class="post_header">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" class="content_link">
+                                        <h5>Forest Festivities: The Best Festival Outfits From Secret Garden Australia</h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_date">
+                                                July 21, 2015
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="one_fifth_bg" style="background-image: url('upload/prague-700x466.jpg');">
+                                <div class="post_header">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" class="content_link">
+                                        <h5>Industry Influencers Reveal the Famous Women Who Inspire</h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_date">
+                                                July 22, 2015
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="one_fifth_bg" style="background-image: url('upload/4-700x466.jpg');">
+                                <div class="post_header">
+                                    <a href="magnificent-image-of-the-new-hoover-dam-bridge-taking-shape.html" class="content_link">
+                                        <h5>Magnificent Image Of The New Hoover Dam Bridge Taking Shape</h5>
+                                        <div class="post_detail post_date">
+                                            <span class="post_info_date">
+                                                July 22, 2015
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="1654935580255560224_loading" class="post_filter_loading">
+                            <div class="loading_wrapper">
+                                <div class="sk-cube-grid">
+                                    <div class="sk-cube sk-cube1"></div>
+                                    <div class="sk-cube sk-cube2"></div>
+                                    <div class="sk-cube sk-cube3"></div>
+                                    <div class="sk-cube sk-cube4"></div>
+                                    <div class="sk-cube sk-cube5"></div>
+                                    <div class="sk-cube sk-cube6"></div>
+                                    <div class="sk-cube sk-cube7"></div>
+                                    <div class="sk-cube sk-cube8"></div>
+                                    <div class="sk-cube sk-cube9"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+  {% endblock content %}   

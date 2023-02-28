@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+            <div id="page_caption" class="  ">
+                <div class="page_title_wrapper">
+                    <div class="page_title_inner">
+                        <div class="post_info_cat">
+                            <div class="breadcrumb"><a href="index.html">Home</a> » Gallery</div>
+                        </div>
+                        <h1><span>Gallery</span></h1>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Begin content -->
+            <div id="page_content_wrapper" class="">
+                <!-- Begin content -->
+
+                <div class="inner">
+                    <div class="inner_wrapper nopadding">
+                        <div id="page_main_content" class="sidebar_content full_width nopadding fixed_column">
+                            <div class="gallery three_cols portfolio-content section content clearfix" data-columns="3">
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated1" data-id="post-1">
+                                        <a data-caption="" class="fancy-gallery" href="upload/pexels-photo-42154.jpg">
+                                            <img src="upload/pexels-photo-42154-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {% for gallery in gallery %}
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated2" data-id="post-2">
+                                        <a data-caption="" class="fancy-gallery" href="{{gallery.image.url}}">
+                                            <img src="{{gallery.image.url}}" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                               <!--  <div class="element grid classic3_cols last">
+                                    <div class="one_third gallery3 static filterable gallery_type animated3" data-id="post-3">
+                                        <a data-caption="" class="fancy-gallery" href="upload/photo-1446814699583-d835df35a267.jpg">
+                                            <img src="upload/photo-1446814699583-d835df35a267-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated4" data-id="post-4">
+                                        <a data-caption="" class="fancy-gallery" href="upload/photo-1444401806725-c145fa11f577.jpg">
+                                            <img src="upload/photo-1444401806725-c145fa11f577-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated5" data-id="post-5">
+                                        <a data-caption="" class="fancy-gallery" href="upload/food-salad-healthy-lunch.jpg">
+                                            <img src="upload/food-salad-healthy-lunch-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols last">
+                                    <div class="one_third gallery3 static filterable gallery_type animated6" data-id="post-6">
+                                        <a data-caption="" class="fancy-gallery" href="upload/DeathtoStock_NYC7-Custom.jpg">
+                                            <img src="upload/DeathtoStock_NYC7-Custom-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated7" data-id="post-7">
+                                        <a data-caption="" class="fancy-gallery" href="upload/prague.jpg">
+                                            <img src="upload/prague-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated8" data-id="post-8">
+                                        <a data-caption="" class="fancy-gallery" href="upload/city-road-street-buildings.jpg">
+                                            <img src="upload/city-road-street-buildings-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols last">
+                                    <div class="one_third gallery3 static filterable gallery_type animated9" data-id="post-9">
+                                        <a data-caption="" class="fancy-gallery" href="upload/photo-1448518184296-a22facb4446f.jpg">
+                                            <img src="upload/photo-1448518184296-a22facb4446f-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated10" data-id="post-10">
+                                        <a data-caption="" class="fancy-gallery" href="upload/4.jpg">
+                                            <img src="upload/4-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols">
+                                    <div class="one_third gallery3 static filterable gallery_type animated11" data-id="post-11">
+                                        <a data-caption="Emotional discomfort, when accepted, rises, crests and falls in a series of waves." class="fancy-gallery" href="upload/photo-1441471349424-351990746ff4.jpg">
+                                            <img src="upload/photo-1441471349424-351990746ff4-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="element grid classic3_cols last">
+                                    <div class="one_third gallery3 static filterable gallery_type animated12" data-id="post-12">
+                                        <a data-caption="" class="fancy-gallery" href="upload/45.jpg">
+                                            <img src="upload/45-700x466.jpg" class="tg-lazy" alt="" />
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+ {% endblock content %}   
