@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from tinymce.models import HTMLField
 
 class Tags(models.Model):
 	name = models.CharField(max_length=300)
@@ -17,20 +18,22 @@ class Event(models.Model):
 	title = models.CharField(max_length=500)
 	image = models.ImageField(default=False)
 	little_discription = models.TextField(default=False)
-	discription = models.TextField()
+	discription = HTMLField()
 	futured = models.BooleanField(default=False)
 	popular = models.BooleanField(default=False)
 	likes=models.ManyToManyField(User, related_name="like", blank=True)
 	# dislikes=models.ManyToManyField(User, related_name="q_disliked", blank=True)
 	tags = models.ManyToManyField(Tags)
+	event_start_date = models.DateTimeField(blank=True, null=True)
+	event_end_date = models.DateTimeField(blank=True, null=True)
 	date_updated = models.DateTimeField(auto_now=True)
 	date_created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.title
 
-	# def get_absolute_url(self):
-	# 	return reverse('webify:forum_details', args=[self.id])
+	def get_absolute_url(self):
+		return reverse('event:event_detail', args=[self.id])
 
 	def num_likes(self):
 		return self.likes.count()

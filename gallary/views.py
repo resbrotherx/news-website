@@ -14,3 +14,5 @@ from django.db.models import Sum
 def index(request):
     gallery = Gallery.objects.all().order_by('-date_updated')
     return render(request,"gallery.html",{'gallery':gallery})
+
+

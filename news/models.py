@@ -31,8 +31,12 @@ class New(models.Model):
 	def __str__(self):
 		return self.title
 
-	# def get_absolute_url(self):
-	# 	return reverse('webify:forum_details', args=[self.id])
+	def get_absolute_url(self):
+		return reverse('news_detail', kwargs={
+			'id': self.id
+		})
+	def get_absolute_url(self):
+		return reverse('new:forum_details', args=[self.id])
 
 	def num_likes(self):
 		return self.likes.count()
@@ -41,14 +45,14 @@ class New(models.Model):
 	# 	return self.dislikes.count()
 
 class NewsComment(models.Model):
-    question=models.ForeignKey(New, related_name="comments", on_delete=models.CASCADE)
-    user=models.ForeignKey(User, on_delete=models.CASCADE)
-    comment=models.TextField()
-    date_updated = models.DateTimeField(auto_now=True)
-    created_at=models.DateTimeField(auto_now_add=True)
+	question=models.ForeignKey(New, related_name="comments", on_delete=models.CASCADE)
+	user=models.ForeignKey(User, on_delete=models.CASCADE)
+	comment=models.TextField()
+	date_updated = models.DateTimeField(auto_now=True)
+	created_at=models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return f"{self.user.username} comment"
+	def __str__(self):
+		return f"{self.user.username} comment"
 
 
 class Email(models.Model):

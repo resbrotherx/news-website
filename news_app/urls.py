@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('news.urls')),
     path('events/', include('events.urls')),
     path('gallery/', include('gallary.urls')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

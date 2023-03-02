@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'news',
     'gallary',
+    'tinymce',
     'events',
     'django.contrib.staticfiles',
 ]

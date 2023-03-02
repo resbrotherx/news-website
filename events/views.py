@@ -24,3 +24,23 @@ def index(request):
         'popular':popular
     }
     return render(request,"events.html",{'event':event})
+
+
+
+
+def event_detail(request, id):
+    event = get_object_or_404(Event, id=id)
+    popular = Event.objects.filter(popular=True).order_by('-date_updated')[0:3]
+    event1 = Event.objects.all()[0:1]
+    event2 = Event.objects.all()[2:4]
+    if request.method == 'POST':
+        email = request.POST.get('EMAIL')
+        print("this the email",email)
+        Email.objects.create(emais=email)
+    context = {
+        "event1":event1,
+        "event2":event2,
+        "event":event,
+        'popular':popular,
+    }
+    return render(request, 'event_details.html',context)
